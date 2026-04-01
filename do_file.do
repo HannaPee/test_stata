@@ -1,5 +1,8 @@
 clear
-cap cd "C:\Users\42610\OneDrive - Handelshögskolan i Stockholm\Documents\Test_stata"
+global wd "C:\Users\42610\OneDrive - Handelshögskolan i Stockholm\Documents\Test_stata"
+global figures "$wd\figures"
+
+cap "$wd"
 
 sysuse auto, clear
 
@@ -42,7 +45,7 @@ graph export ./figures/figure4.png, replace wid(1000)
 
 ! git status
 ! git add do_file.do
-! git commit -m "Add do file"
+! git commit -m "Add do file_2"
 ! git push
 
 // Add figures from folder "figures"
