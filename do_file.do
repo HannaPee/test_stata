@@ -36,3 +36,17 @@ graph export ./figures/figure4.png, replace wid(1000)
 // Push changes to directory 
 ! git branch -M main
 ! git push -u origin main
+
+
+// Add do_file to repository 
+
+! git status
+! git add do_file.do
+! git commit -m "Add do file"
+! git push
+
+// Add figures from folder "figures"
+
+! git add figures/
+! git commit -m "Add figures"
+! git push
