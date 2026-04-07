@@ -19,8 +19,11 @@ version                     // check the version of the command interpreter
 
 
 * Set working directory to the current repo folder
-cd "/Users/hannapersson/Documents/Metrics II/test_stata"
+cd "/Users/hannapersson/Documents/Metrics II"
 global wd "`c(pwd)'"
+
+* Add a git-file repository* 
+! git clone https://github.com/HannaPee/test_stata.git
 
 
 ** capture
@@ -290,11 +293,11 @@ restore, preserve
 collapse (count) change
 display change
 
+// Make sure we are in the correct folder 
 
-
-// Push changes to directory 
-! git branch -M main
-! git push -u origin main
+* Set working directory to the current repo folder
+cd "/Users/hannapersson/Documents/Metrics II/test_stata"
+global wd "`c(pwd)'"
 
 
 // Add do_file to repository 
